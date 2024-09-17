@@ -1,0 +1,19 @@
+<!-- templates/myapp/client_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client Form</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Client Form</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
